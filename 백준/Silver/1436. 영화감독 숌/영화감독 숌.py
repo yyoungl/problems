@@ -1,10 +1,11 @@
 N = int(input())
-numbers = []
 number = 666
+cnt = 1
 
-while len(numbers) < N:
-    if '666' in str(number):
-        numbers.append(number)
+while cnt < N:
     number += 1
+    if '666' in str(number):
+        cnt+=1 
+    
 
-print(numbers[-1])
+print(number)
