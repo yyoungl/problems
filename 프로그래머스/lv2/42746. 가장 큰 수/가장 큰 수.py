@@ -2,7 +2,7 @@ def solution(numbers):
     numbers = list(map(str, numbers))
     
     # 숫자를 정렬하는 기준을 변경하여 정렬
-    numbers.sort(key=lambda x: x*3, reverse=True)
+    numbers.sort(key=lambda x: x*4, reverse=True)
     
     # 리스트의 숫자들을 이어붙여서 문자열로 반환
     answer = ''.join(numbers)
