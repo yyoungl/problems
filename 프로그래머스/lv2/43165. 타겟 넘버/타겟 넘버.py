@@ -1,3 +1,4 @@
+# BFS로 푸는 방법
 def solution(numbers, target):
     answer = 0
     result = [0]
@@ -12,3 +13,5 @@ def solution(numbers, target):
             answer+=1
 
     return answer
+
+# DFS로 푸는 방법 공부하기
