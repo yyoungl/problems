@@ -1,0 +1,38 @@
+import java.util.Stack;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Stack<Integer> stack = new Stack<>();
+		int last = 0;
+		Scanner sc = new Scanner(System.in);
+		StringBuilder sb = new StringBuilder();
+		stack.push(0);
+		int N = sc.nextInt();
+		for (int i = 0; i < N; i++) {
+			int num = sc.nextInt();
+			if (stack.peek() < num) {
+				for (int j=last+1; j<=num; j++) {
+					stack.push(j);
+					sb.append("+\n");
+					last+=1;
+				}
+			}
+			while (stack.peek() > num) {
+				stack.pop();
+				sb.append("-\n");
+			}
+			if (stack.pop() != num) {
+					System.out.println("NO");
+					return;
+			} else {
+				sb.append("-\n");
+			}	
+		}
+		System.out.println(sb.toString());
+
+	}
+
+}
