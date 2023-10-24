@@ -65,8 +65,8 @@ public class Main {
 			for (int i = 0; i < size; i++) {
 				Cloud curr = clouds.get(i);
 				cloud[curr.r][curr.c] = false;
-				int nr = (curr.r + s * dr[d] + 100 * N) % N;
-				int nc = (curr.c + s * dc[d] + 100 * N) % N;
+				int nr = (curr.r + s * dr[d] + 50 * N) % N;
+				int nc = (curr.c + s * dc[d] + 50 * N) % N;
 				curr.r = nr;
 				curr.c = nc;
 				map[nr][nc] += 1;
