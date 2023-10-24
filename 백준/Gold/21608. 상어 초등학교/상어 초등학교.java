@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -70,10 +69,12 @@ public class Main {
 						
 						if (likeCnt > selected.like) {
 							selected = new Node(r, c, likeCnt, vacant);
+                            isSelected = true;
 						} else if (likeCnt == selected.like && vacant > selected.vacant) {
 							selected = new Node(r, c, likeCnt, vacant);
+                            isSelected = true;
 						}
-						else if (!isSelected) {
+						if (!isSelected) {
 							selected = new Node(r, c, likeCnt, vacant);
 							isSelected = true;
 						}
